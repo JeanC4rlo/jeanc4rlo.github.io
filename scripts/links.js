@@ -1,6 +1,8 @@
-let links = [
-    "https://jeanc4rlo.github.io/minepedia/index.html",
-    "https://jeanc4rlo.github.io/kunwana/index.html"
+let base = "https://jeanc4rlo.github.io/";
+
+let pages = [
+    "minepedia",
+    "kunwana"
 ];
 
 async function carregarLink(link) {
@@ -17,21 +19,21 @@ async function carregarLink(link) {
         let descricao = doc.querySelector('meta[property="og:description"]');
 
         let $artigo = $("<article>");
-        let $imagem = $(`<img src=${imagem.getAttribute("content")}>`)
+        let $imagem = $(`<img src=${imagem.getAttribute("content")}>`);
 
         $imagem.appendTo($artigo);
 
-        let $informacoes = $('<div class="informacoes"></div>')
+        let $informacoes = $('<div class="informacoes"></div>');
 
-        let $titulo = $(`<h3>${titulo.getAttribute("content")}</h3>`)
-        let $descricao = $(`<p lang="pt-BR">${descricao.getAttribute("content")}</p>`)
-        let $url = $(`<a lang="en" href="${url.getAttribute("content")}" target="_blank">Acessar</a>`)
+        let $titulo = $(`<h3>${titulo.getAttribute("content")}</h3>`);
+        let $descricao = $(`<p lang="pt-BR">${descricao.getAttribute("content")}</p>`);
+        let $url = $(`<a lang="en" href="${url.getAttribute("content")}" target="_blank">Acessar</a>`);
 
         $titulo.appendTo($informacoes);
         $descricao.appendTo($informacoes);
         $url.appendTo($informacoes);
 
-        $informacoes.appendTo($artigo)
+        $informacoes.appendTo($artigo);
         $artigo.appendTo(".projetos");
     }
     catch(error) {
@@ -40,4 +42,6 @@ async function carregarLink(link) {
     }
 }
 
-links.forEach(carregarLink);
+pages.forEach((page) => {
+    carregarLink(base + page + "/");
+});
