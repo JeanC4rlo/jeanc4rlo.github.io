@@ -1,39 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JeanC4rlo</title>
+    <link rel="shortcut icon" href="https://github.com/JeanC4rlo.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="estilos/geral.css">
-    <link rel="stylesheet" href="estilos/fontes.css">
-    <link rel="stylesheet" href="estilos/index.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/index.css">
 
-    <script src="jquery.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <h1>JeanC4rlo</h1>
+        <a href="">
+            <h1>JeanC4rlo</h1>
+        </a>
         <nav>
-            <a href="index.html" class="ativo">Introdução</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="sobre-mim.html">Sobre mim</a>
+            <a href="" class="active">Página principal</a>
+            <a href="/pages/vinculos.html">Vínculos</a>
+            <a href="/pages/portifolio.html">Portifólio</a>
         </nav>
-        <address>
-            <a href="https://github.com/JeanC4rlo">
-                <img src="imagens/redes_sociais/github.png" alt="">
-            </a>
-            <a href="https://www.instagram.com/jeanc4rlo.dev/">
-                <img src="imagens/redes_sociais/instagram.png" alt="">
-            </a>
-        </address>
     </header>
-
     <main>
-        <img src="imagens/perfil.jpeg" alt="">
-        <div>
+        <div class="main-icon">
+            <img src="https://github.com/JeanC4rlo.png" alt="">
+        </div>
+        <div class="desc-container">
             <h2>JeanC4rlo</h2>
-            <p>Um desenvolvedor web júnior apenas seguindo sua maior paixão.</p>
+            <p class="desc">
+                Um desenvolvedor iniciante que aspira a grandes ambições.
+            </p>
+            <div class="lang">
+                <div class="lang-item">
+                    <div class="image-wrapper">
+                        <img src="/images/brazil.png" alt="">
+                    </div>
+                    <p>Nativo</p>
+                </div>
+                <div class="lang-item">
+                    <div class="image-wrapper">
+                        <img src="/images/uk.png" alt="">
+                    </div>
+                    <p>B2 - C1</p>
+                </div>
+                <div class="lang-item">
+                    <div class="image-wrapper">
+                        <img src="/images/japan.png" alt="">
+                    </div>
+                    <p>Estudando</p>
+                </div>
+            </div>
+            <hr>
+            <div class="social">
+                <a class="social-item" href="https://github.com/JeanC4rlo">
+                    <div class="image-wrapper">
+                        <img src="/images/github.png" alt="">
+                    </div>
+                    <p>JeanC4rlo</p>
+                </a>
+                <a class="social-item" href="https://instagram.com/jeanc4rlo.dev">
+                    <div class="image-wrapper">
+                        <img src="/images/instagram.png" alt="">
+                    </div>
+                    <p>@jeanc4rlo.dev</p>
+                </a>
+            </div>
         </div>
     </main>
 </body>
