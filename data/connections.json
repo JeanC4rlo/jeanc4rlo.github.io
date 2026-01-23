@@ -1,0 +1,14 @@
+[
+    {
+        "id": "grupo-xd",
+        "name": "Grupo XD",
+        "description": "Apenas um grupo de amigos loucos",
+        "url": "github.com/grupo-xd"
+    },
+    {
+        "id": "calculo-renal",
+        "name": "Cálculo Renal",
+        "description": "Grupo da IC de Cálculo 2025-2026",
+        "url": "github.com/calculo-renal"
+    }
+]
