@@ -5,7 +5,7 @@ let pages = [
     "kunwana"
 ];
 
-async function loadItem(link) {
+async function loadPortifolioItem(link) {
     try {
         const page = await fetch(link);
         const html = await page.text();
@@ -40,6 +40,6 @@ async function loadItem(link) {
 
 function loadPortifolio() {
     pages.forEach(async (page) => {
-        await loadItem(base + page + "/");
+        await loadPortifolioItem(base + page + "/");
     });
 }
