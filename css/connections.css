@@ -27,7 +27,7 @@ main {
     height: auto;
     object-fit: contain;
     border: 2px solid white;
-    padding: 1rem;
+    padding: .5rem;
     flex-shrink: 0;
 }
 

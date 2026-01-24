@@ -26,7 +26,7 @@ main {
 .portifolio-item img {
     width: 40vw;
     border: 2px solid white;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 .portifolio-item .details {
