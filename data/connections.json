@@ -10,5 +10,11 @@
         "name": "Cálculo Renal",
         "description": "Grupo da IC de Cálculo 2025-2026",
         "url": "https://github.com/calculo-renal"
+    },
+    {
+        "id": "jprojetos",
+        "name": "JProjetos",
+        "description": "Dois melhores amigos e um grupo",
+        "url": "https://github.com/jprojetos"
     }
 ]
