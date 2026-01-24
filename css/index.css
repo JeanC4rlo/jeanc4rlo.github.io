@@ -8,16 +8,25 @@ main {
 }
 
 .main-icon {
-    transition: transform 0.1s linear;
-    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: clamp(160px, 60vw, 320px);
+    height: clamp(160px, 60vw, 320px);
+
+    padding: 6px;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
 }
 
 .main-icon img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 50%;
-    padding: 2%;
-    border: 4px solid white;
+    display: block;
 }
 
 .desc-container {
@@ -25,7 +34,7 @@ main {
 }
 
 .desc-container h2 {
-    font-size: 28pt;
+    font-size: clamp(20pt, 4vw, 28pt);
 }
 
 .lang {
@@ -93,4 +102,43 @@ main {
     height: 24px;
     object-fit: contain; 
     border-radius: 50%;
+}
+
+@media (min-width: 660px) and (max-width: 1000px) {
+    main {
+        flex-direction: column; 
+        gap: 3rem;
+        text-align: center;
+    } 
+
+    .lang, 
+    .social {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .desc-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 660px) {
+    main {
+        flex-direction: column; 
+        gap: 3rem;
+        text-align: center;
+    } 
+
+    .lang {
+        justify-content: center;
+    }
+
+    .lang-item p {
+        display: none;
+    }
+
+    .social {
+        flex-direction: column;
+        align-items: center;
+    }
 }

@@ -12,14 +12,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-
-    <script src="/js/loadConnections.js"></script>
 </head>
 <body>
     <header>
-        <a href="/index.html">
-            <h1>JeanC4rlo</h1>
-        </a>
+        <div class="mobile">
+            <a href="/index.html">
+                <h1>JeanC4rlo</h1>
+            </a>
+            <img src="/images/arrow_right.svg" class="menu">
+        </div>
         <nav>
             <a href="/index.html">Página principal</a>
             <a href="" class="active">Vínculos</a>
@@ -30,7 +31,12 @@
         <div class="connections"></div>
     </main>
 </body>
+
+<script src="/js/loadConnections.js"></script>
+<script src="/js/useHeader.js"></script>
+
 <script>
     loadConnections();
 </script>
+
 </html>

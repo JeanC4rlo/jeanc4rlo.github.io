@@ -49,3 +49,25 @@ main {
     color: white;
     padding-left: 1rem;
 }
+
+@media (max-width: 1000px) {
+    .portifolio {
+        gap: 3rem;
+    }
+    
+    .portifolio-item {
+        flex-direction: column !important;
+    }
+
+    .portifolio-item img {
+        width: 100%;
+    }
+
+    .portifolio-item .details h2 {
+        font-size: 16pt;
+    }
+
+    .portifolio-item .details p {
+        font-size: 12pt;
+    }
+}

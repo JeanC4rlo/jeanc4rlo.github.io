@@ -16,6 +16,7 @@
     font-family: Fira Code;
     text-wrap: wrap;
     hyphens: auto;
+    box-sizing: border-box;
 }
 
 a {
@@ -52,6 +53,8 @@ nav a {
     position: relative;
     color: var(--main);
     text-decoration: none;
+    width: 100%;
+    text-wrap: nowrap;
 }
 
 nav a.active {
@@ -59,15 +62,15 @@ nav a.active {
     font-weight: 900;
 }
 
-nav a.active::after {
-    content: "^";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.9rem;
-    color: var(--secondary);
+header .mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
 
-    animation: infinite 2s arrow-animation;
+header .menu {
+    display: none;
 }
 
 @keyframes arrow-animation {
@@ -85,5 +88,90 @@ nav a.active::after {
     }
     100% {
         bottom: -1.2rem;
+    }
+}
+
+@media (min-width: 660px) {
+    nav a.active::after {
+        content: "^";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.9rem;
+        color: var(--secondary);
+
+        animation: infinite 2s arrow-animation;
+    }
+}
+
+@media (min-width: 660px) and (max-width: 1000px) {
+    body {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 660px) {
+    body {
+        padding: 0 2rem;
+        grid-template-rows: auto 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        width: 100%;
+        gap: .25rem;
+    }
+
+    header.active nav {
+        display: flex;
+    }
+
+    header .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: black;
+        width: 2rem;
+        height: 2rem;
+        border-radius: .25rem;
+        transition: transform 100ms ease;
+    }
+
+    header .menu:hover {
+        background-color: transparent;
+        border: 2px solid black;
+        cursor: pointer;
+        filter: invert(1);
+    }
+
+    header.active .menu {
+        transform: rotateZ(90deg);
+    }
+
+    nav a {
+        background-color: var(--main);
+        color: black;
+        width: 100%;
+        padding: .5rem 0;
+        text-align: center;
+    }
+
+    nav a.active {
+        background-color: var(--secondary);
+        color: black;
+        padding: 1rem 0;
+    }
+
+    nav a:hover {
+        background-color: white;
     }
 }
