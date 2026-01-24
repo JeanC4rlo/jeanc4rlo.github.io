@@ -73,6 +73,10 @@ header .menu {
     display: none;
 }
 
+main {
+    padding-bottom: 2rem;
+}
+
 @keyframes arrow-animation {
     0% {
         bottom: -1.2rem;
