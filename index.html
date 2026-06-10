@@ -4,60 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JeanC4rlo</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://github.com/JeanC4rlo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <main>
-        <div class="background">
-            <div id="particles"></div>
-        </div>
-    </main>
-
     <header>
-        <div class="left">
-            <div class="logo">
-                <img
-                    src="https://github.com/JeanC4rlo.png"
-                    alt="Logo do JeanC4rlo"
-                >
-                <h1>JeanC4rlo</h1>
-            </div>
+        <div class="logo">
+            <img src="https://github.com/JeanC4rlo.png" alt="">
+            <span>JeanC4rlo</span>
         </div>
 
-        <div class="center">
-            <nav class="page-nav">
-                <a href="">Projetos</a>
-                <a href="">Habilidades</a>
-                <a href="">Sobre mim</a>
-            </nav>
-        </div>
-
-        <div class="right">
-            <nav class="social-nav">
-                <a href="https://github.com/JeanC4rlo">
-                    <img src="assets/images/github.svg" alt="Logo do Github">
-                </a>
-                <a href="https://www.linkedin.com/in/jeanc4rlo">
-                    <img src="assets/images/linkedin.svg" alt="Logo do LinkedIn">
-                </a>
-                <a href="https://youtube.com/@jeanc4rlo_dev">
-                    <img src="assets/images/youtube.svg" alt="Logo do Youtube">
-                </a>
-                <a href="https://instagram.com/jeanc4rlo.dev">
-                    <img src="assets/images/instagram.svg" alt="Logo do Instagram">
-                </a>
-            </nav>
-        </div>
+        <nav>
+            <a href="#home">Início</a>
+            <a href="#projects">Projetos</a>
+            <a href="#about">Sobre</a>
+            <a href="#contact">Contato</a>
+        </nav>
     </header>
+
+    <section id="home">
+        <div class="info">
+            <h1>Olá! Sou JeanC4rlo!</h1>
+            <hr>
+            <p>
+                Sou um desenvolvedor de software apaixonado por interfaces e experiências criativas,
+                programação de baixo nível e cibersegurança.
+            </p>
+        </div>
+    </section>
 </body>
-
-<script src="lib/jquery.js"></script>
-<script src="lib/particles.js"></script>
-<script src="app.js"></script>
-
 </html>

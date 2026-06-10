@@ -1,0 +1,87 @@
+
+
+section {
+  height: 100vh;
+}
+
+#home {
+  background:
+    url("assets/images/back.png"), url("assets/images/effects/halftone.jpg"),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.85) 20%,
+      rgba(0, 0, 0, 0.75) 40%,
+      rgba(0, 0, 0, 0.55) 55%,
+      rgba(0, 0, 0, 0.3) 70%,
+      rgba(0, 0, 0, 0.1) 85%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+  background-size: cover, cover, cover;
+
+  background-position: center, center, center;
+
+  background-blend-mode: multiply;
+}
+
+#home .info {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+
+  position: fixed;
+  bottom: 25%;
+  left: 5%;
+
+  width: clamp(300px, 80%, 600px);
+
+  color: white;
+
+  user-select: none;
+}
+
+#home .info h1 {
+  font-family:
+    Funnel Display,
+    Arial,
+    sans-serif;
+  font-weight: 900;
+  font-size: 48pt;
+}
+
+#home .info hr {
+  margin: 0 0 0.25rem;
+}
+
+#home .info p {
+  font-family:
+    DM Sans,
+    Arial,
+    sans-serif;
+  font-weight: 500;
+  font-size: 12pt;
+}
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#home .info h1 {
+  animation: drop 0.5s ease-out 0s backwards;
+}
+
+#home .info hr {
+  animation: drop 0.5s ease-out 0.4s backwards;
+}
+
+#home .info p {
+  animation: drop 0.5s ease-out 0.9s backwards;
+}
